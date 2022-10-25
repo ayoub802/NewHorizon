@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">NEW HORIZON</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Search">
+             <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="dashboard.html">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+             <span class="tooltip">Dashboard</span>
+          </li>
+          <li>
+           <a href="post.html">
+            <i class='bx bx-edit' ></i>
+             <span class="links_name">Post</span>
+           </a>
+           <span class="tooltip">Post</span>
+         </li>
+         <li>
+           <a href="demande.html">
+            <i class='bx bx-time' ></i>
+             <span class="links_name">Demande</span>
+           </a>
+           <span class="tooltip">Demande</span>
+         </li>
+         <li>
+           <a href="Professor.html">
+            <i class='bx bx-user' ></i>
+             <span class="links_name">Professeur</span>
+           </a>
+           <span class="tooltip">Professeur</span>
+         </li>
+         <li class="profile">
+             <div class="profile-details">
+               <img src="image/about1.jpg" alt="profileImg">
+               <div class="name_job">
+                 <div class="name">User 1</div>
+                 <div class="job">Admin</div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
+
+      <main>
+          <section class="header-section container">
+            <div class="text">Demande</div>
+
+            <form action="" class="search_form">
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search" class="search_field">
+            </form>
+
+            <div class="header_action">
+                <div class="notification">
+                    <i class='bx bx-bell' >
+                        <span class="span"></span>
+                    </i>
+                </div>
+                <button class="dark">
+                    <i class='bx bx-moon' id="theme_button"></i>
+                </button>
+            </div>
+          </section>
+
+          <section class="section content">
+              <div class="container demande_container grid"> 
+                  <div class="header">
+                        <h2 class="header_content_title">List Demandes : 23</h2>
+                            <a href="post.html" class="header_btn">
+                                Ajouter Post
+                            </a>
+                  </div>
+
+                  <div class="table_section">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Departement</th>
+                          <th>Stage</th>
+                          <th>Assaigned</th>
+                          <th>Team</th>
+                          <th>Date</th>
+                          <th>Status</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal1">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal2">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal3">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal4">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal5">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal6">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal7">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal8">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                           <tr>
+                          <td>CES-9000</td>
+                          <td>Developement</td>
+                          <td>David</td>
+                          <td>Mobile App</td>
+                          <td>17-09-2022</td>
+                          <td><span class="badge">Active</span></td>
+                          <td>
+                             <a class="show_modal" id="open-modal9">
+                                <i class='bx bx-show' ></i>
+                             </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div class="modal" id="modal"></div>
+                        <div class="alert" id="alert">
+                        <div class="alert__header">
+                            <h2 class="alert__title">David -> Mobile App</h2>
+                            <button class="alert__close-btn" id="close-alert-btn"><i class='bx bx-x' ></i></button>
+                        </div>
+                        <div class="alert__body">
+                            <p class="alert__desc">Departement : CES-9000</p>
+                            <p class="alert__desc">Stage : Developement</p>
+                            <p class="alert__desc">Date : 17-09-2022</p>
+                        </div>
+                        <div class="alert__footer">
+                            <p class="alert__desc">Status : <span class="badge">Active</span></p>
+                        </div>
+                        </div>
+
+                 </div>
+              </div>
+          </section>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+      <script src="js/app.js"></script>
+</body>
+</html>
