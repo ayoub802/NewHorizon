@@ -166,7 +166,7 @@
   .login_field{
     font-family: var(--ff-gilory);
     padding: 15px 15px;
-    width: 300px;
+    width: 400px;
     border-radius: 8px;
     background-color: var(--body-color);
     margin-block-end: 10px;
@@ -201,7 +201,7 @@
       }
       .login{
         display: grid;
-        grid-template-columns: 1.5fr .5fr;
+        grid-template-columns: 1fr .5fr;
       }
 
   }
