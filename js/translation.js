@@ -499,7 +499,7 @@ $(function() {
       $('.home_container').css('align-items', 'flex-start');
       $('.home_content').css('text-align', 'right');
       $('.home_content .btn').css('margin-left', 'auto').css('margin-right', 'unset');
-      $(".home_content .section_subtitle").text("تعليم عبر الإنترني %100");
+      $(".home_content .section_subtitle").text("تعليم عبر الإنترنيت %100");
       $(".home_content  .home_title").html("لنجعل <span class='span'>التعلم</span> ممتعا و فضاء<span class='span'>تعليمي</span>");
       $(".home_content  .home_text").html("الحصول على دورة تدريبية عالية الجودة عبر الإنترنت");
       $(".home_content  .btn").html("البدء");
