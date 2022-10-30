@@ -1,7 +1,11 @@
 $(function() {
   $(".fr").click(function() {
     $('html').css('font-family', 'Gilroy, sans-serif');
-    $(".nav_list ul .nav_link_down").css('font-weight', '500').css('font-size','14px')
+    $(".nav_list ul .nav_link_down").css('font-weight', '500').css('font-size','14px');
+    if($(window).width() > 992)
+    {
+      $('.nav_list ul li a:hover').css('transfrom', 'translateX(10px)')
+    }
             //header
             $(".nav_list .nav_link").eq(0).html("Préscolaire <i class='bx bx-chevron-down'></i>");
             $(".nav_list .nav_link").eq(1).html("Primaire <i class='bx bx-chevron-down'></i>");
@@ -28,12 +32,16 @@ $(function() {
             
             // HOME SECTION
             $('.home_banner').css('order', '1');
-            $('.home_container').css('grid-template-columns', '.95fr .8fr');
+            $('.home_shape_1').css('width', '195px');
+
+            if($(window).width() > 767){
+              $('.home_container').css('grid-template-columns', '.95fr .8fr')
+            }
             $('.home_container').css('align-items', 'flex-start');
             $('.home_content').css('text-align', 'left');
             $('.home_content .btn').css('margin-right', 'auto').css('margin-left', 'unset');
             $(".home_content .section_subtitle").text("100% cours en ligne");
-            $(".home_content  .home_title").html("rendons <br><span class='span'>l'Apprentissage</span>amusant et l'espace<br><span class='span'>d'Enseignement</span>");
+            $(".home_content  .home_title").html("rendons <br><span class='span'>l'Apprentissage</span>amusant et l'espace<br><span class='span'>d'Enseignement</span> ");
             $(".home_content  .home_text").html("obtenir un cours de qualité gràce en ligne");
             $(".home_content  .btn").html("Commencer");
       
@@ -54,22 +62,26 @@ $(function() {
             
             $(".niveaux_container .1  .niveaux_list .niveaux_link").eq(0).html("Préliminaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .1  .niveaux_list .niveaux_link").eq(1).html("Préparatoire <i class='bx bx-right-arrow-alt' ></i>");
-      
+            $('.niveaux_container .1 .niveaux_footer .niveaux_title').html("ST.SUJETS PRIMAIRE <i class='bx bx-right-arrow-alt' ></i>");
+
             $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(0).html("Premiére Année Du Primaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(1).html("Deuxiéme Année Du Primaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(2).html("Troisiéme Année Du Primaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(3).html("Quatriéme Année Du Primaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(4).html("Cinquiéme Année Du Primaire <i class='bx bx-right-arrow-alt' ></i>");
-      
+            $('.niveaux_container .2 .niveaux_footer .niveaux_title').html("ST.SUJETS PRIMAIRE <i class='bx bx-right-arrow-alt' ></i>");
+
             $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(0).html("Moyenne De La Premiére Année <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(1).html("Moyenne De La Deuxiéme Année <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(2).html("Moyenne De La Troisiéme Année <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(3).html("Moyenne De La Quatriéme Année <i class='bx bx-right-arrow-alt' ></i>");
-      
+            $('.niveaux_container .3 .niveaux_footer .niveaux_title').html("THÉME ET SOLUTIONS S.A.L <i class='bx bx-right-arrow-alt' ></i>");
+
             $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(0).html("Premiére Année Du Secondaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(1).html("Deuxiéme Année Du Secondaire <i class='bx bx-right-arrow-alt' ></i>");
             $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(2).html("Troisiéme Année Du Secondaire <i class='bx bx-right-arrow-alt' ></i>");
-            
+            $('.niveaux_container .4 .niveaux_footer .niveaux_title').html("THÉME ET SOLUTIONS S.A.L <i class='bx bx-right-arrow-alt' ></i>");
+
             // About
             $('.about_container').css('grid-template-columns','.9fr 1fr').css('gap', '2rem').css('align-item','flex-start');
             $('.about_content').css('order', '1').css('text-align','left').css('max-width', '40ch');
@@ -196,11 +208,14 @@ $(function() {
 
 
             // EXERCICE
+            $('.box_title').css('text-align','left');
             $('.exercice_title').text('Examens et exercices');
             $('.box_title a').eq(0).text("Formulaires d'examen pour toutes les matières, première année du primaire");
             $('.box_title a').eq(1).text("Mon livre aux examens du semestre 1 primaire 2ème génération");
             $('.box_title a').eq(2).text("Cahier d'activités mathématiques année 1 primaire 2ème génération");
 
+            // PDF
+            $('.pdf_title').text("Livre d'archives de niveau primaire");
 
             // FOOTER
             $(".footer .section_text").html("Nous croyons qu'il faut faire du monde une meilleure expérience. Excellentes idées de cours et plans de cours pour les étudiants ! ");
@@ -279,22 +294,26 @@ $(function() {
       
       $(".niveaux_container .1  .niveaux_list .niveaux_link").eq(0).html("Preliminary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .1  .niveaux_list .niveaux_link").eq(1).html("Preparatory <i class='bx bx-right-arrow-alt' ></i>");
+      $('.niveaux_container .1 .niveaux_footer .niveaux_title').html("ST.SUJETS PRIMAIRE <i class='bx bx-right-arrow-alt' ></i>");
 
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(0).html("First Year Of Primary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(1).html("Second Year Of Primary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(2).html("Third Year Of Primary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(3).html("Fourth year of primary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(4).html("Fifth year of primary <i class='bx bx-right-arrow-alt' ></i>");
+      $('.niveaux_container .3 .niveaux_footer .niveaux_title').html("ST.SUJETS PRIMAIRE <i class='bx bx-right-arrow-alt' ></i>");
 
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(0).html("First Year Average <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(1).html("Second Year Average <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(2).html("Third Year Average <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(3).html("Fourth Year Average <i class='bx bx-right-arrow-alt' ></i>");
+      $('.niveaux_container .4 .niveaux_footer .niveaux_title').html("THÉME ET SOLUTIONS S.A.L <i class='bx bx-right-arrow-alt' ></i>");
 
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(0).html("First year of secondary school <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(1).html("Second year of secondary school <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(2).html("Third year of secondary school <i class='bx bx-right-arrow-alt' ></i>");
-      
+      $('.niveaux_container .4 .niveaux_footer .niveaux_title').html("THÉME ET SOLUTIONS S.A.L <i class='bx bx-right-arrow-alt' ></i>");
+
       // About
       $('.about_container').css('grid-template-columns','.9fr 1fr').css('gap', '2rem').css('align-item','flex-start');
       $('.about_content').css('order', '1').css('text-align','left').css('max-width', '40ch');
@@ -422,10 +441,15 @@ $(function() {
 
 
        // EXERCICE
+       $('.box_title').css('text-align','left');
+
        $('.exercice_title').text('Exams and exercises');
        $('.box-card .box_title a').eq(0).text("Examination forms for all subjects, first year of primary");
        $('.box-card .box_title a').eq(1).text("My book for the exams of semester 1 primary 2nd generation");
        $('.box-card .box_title a').eq(2).text("Mathematics activity book year 1 primary 2nd generation");
+
+       // PDF
+      $('.pdf_title').text("Primary level archival book");
 
       // FOOTER
       $(".footer .section_text").html('We believe in making the world a better experience. Great lesson ideas and lesson plans for students!');
@@ -500,7 +524,7 @@ $(function() {
       $('.home_content').css('text-align', 'right');
       $('.home_content .btn').css('margin-left', 'auto').css('margin-right', 'unset');
       $(".home_content .section_subtitle").text("تعليم عبر الإنترنيت %100");
-      $(".home_content  .home_title").html("لنجعل <span class='span'>التعلم</span> ممتعا و فضاء<span class='span'>تعليمي</span>");
+      $(".home_content  .home_title").html("لنجعل <span class='span'>التعلم</span> ممتعا و فضاء<span class='span'>تعليمي</span>  <img src='image/home_shape1.png' class='shape home_shape_1'>");
       $(".home_content  .home_text").html("الحصول على دورة تدريبية عالية الجودة عبر الإنترنت");
       $(".home_content  .btn").html("البدء");
 
@@ -521,22 +545,26 @@ $(function() {
       
       $(".niveaux_container .1  .niveaux_list .niveaux_link").eq(0).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>التمهيدي</span>");
       $(".niveaux_container .1  .niveaux_list .niveaux_link").eq(1).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>الإعدادي</span>");
+      $('.niveaux_container .1 .niveaux_footer .niveaux_title').html("<i class='bx bx-left-arrow-alt'></i> مواضيع وحلول التعليم التمهيدي");
 
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(0).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة أولى إبتدائي</span>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(1).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الثانية إبتدائي</span>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(2).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الثالثة إبتدائي</span>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(3).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الرابعة إبتدائي</span>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(4).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الخامسة إبتدائي</span>");
+      $('.niveaux_container .2 .niveaux_footer .niveaux_title').html("<i class='bx bx-left-arrow-alt'></i>  مواضيع وحلول التعليم الإبتدائي");
 
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(0).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة أولى إعدادي</span>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(1).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الثانية إعدادي</span>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(2).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الثالثة إعدادي</span>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(3).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الرابعة إعدادي</span>");
+      $('.niveaux_container .3 .niveaux_footer .niveaux_title').html("<i class='bx bx-left-arrow-alt'></i> مواضيع وحلول التعليم الإعدادي");
 
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(0).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة أولى ثانوي</span>");
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(1).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الثانية ثانوي</span>");
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(2).html("<i class='bx bx-left-arrow-alt'></i> <span class='span'>سنة الثالثة ثانوي</span>");
-     
+      $('.niveaux_container .4 .niveaux_footer .niveaux_title').html("<i class='bx bx-left-arrow-alt'></i> مواضيع وحلول التعليم الثانوي ");
+
       // ABOUT
       $('.about_container').css('grid-template-columns','1fr .9fr').css('gap', '0').css('align-item','flex-end');
       $('.about_content').css('order', '-1').css('text-align','right').css('max-width', '50ch');
@@ -662,6 +690,17 @@ $(function() {
       $('.lessont_item_text a').eq(14).text("دليل المعلم الرياضيات والعلوم 1 ابتدائي الجيل الثاني");
       $('.lessont_item_text a').eq(15).text("الوثيقة المصاحبة للجيل الثاني من برامج التعليم الابتدائي");
       
+
+      // EXERCICE
+      $('.box_title').css('text-align','right');
+      $('.exercice_title').text('الإمتحانات و التمارين');
+      $('.box-card .box_title a').eq(0).text("استمارات الامتحان لجميع المواد للسنة الأولى من المرحلة الابتدائية");
+      $('.box-card .box_title a').eq(1).text("كتاب لامتحانات الفصل الأول الابتدائي الجيل الثاني");
+      $('.box-card .box_title a').eq(2).text("كتاب نشاط الرياضيات للعام الأول الابتدائي الجيل الثاني");
+      $('.box-card .box_title a').eq(3).text("كتاب نشاط الرياضيات للعام الأول الابتدائي الجيل الثاني");
+
+      // PDF
+      $('.pdf_title').text('كتاب أرشيفية من المستوى الابتدائي')
     });
     
 });
