@@ -2,10 +2,13 @@ $(function() {
   $(".fr").click(function() {
     $('html').css('font-family', 'Gilroy, sans-serif');
     $(".nav_list ul .nav_link_down").css('font-weight', '500').css('font-size','14px');
-    if($(window).width() > 992)
-    {
-      $('.nav_list ul li a:hover').css('transfrom', 'translateX(10px)')
-    }
+    $('.nav_list ul li a').hover(function(){
+        $(this).css('transform','translateX(10px)');
+      },function(){
+        $(this).css('transform','translateX(0px)');
+      }
+    )
+
             //header
             $(".nav_list .nav_link").eq(0).html("Préscolaire <i class='bx bx-chevron-down'></i>");
             $(".nav_list .nav_link").eq(1).html("Primaire <i class='bx bx-chevron-down'></i>");
@@ -53,6 +56,12 @@ $(function() {
             $(".expert_card:nth-child(4) .span").text('étudiant Actif');
             
             // NiVEAU
+            $('.niveaux_link').hover(function(){
+              $(this).css('transform','translateX(10px)');
+            },function(){
+              $(this).css('transform','translateX(0px)');
+            }
+          )
             $(".niveaux .section_subtitle").text('Notre Niveaux Scolaire');
             $(".niveaux .section_title").html('trouver votre <span class="span">niveaux </span>');
             $(".niveaux_container .one .card_title").text('Préscolaire');
@@ -217,6 +226,88 @@ $(function() {
             // PDF
             $('.pdf_title').text("Livre d'archives de niveau primaire");
 
+            // CHAPITRE
+            $('.chapitre_content, .chapiter_header').css('text-align', "left");
+            $('.chapitre_card.one').css('order','1');
+            $('.chapitre_card.three').css('order','3');
+            $('.chapitre_item').css('justify-content', "start");
+            $('.chapitre_item').hover(function(){
+              $(this).css('transform','translateX(10px)');
+            },function(){
+              $(this).css('transform','translateX(0px)');
+            }
+            )
+
+            $('.chapitre_title').eq(0).html('semestre 1')
+            $('.chapitre_title').eq(1).html('semestre 2')
+            $('.chapitre_title').eq(2).html('semestre 3')
+
+            $('.chapitre_list:nth-child(1) .chapitre_subtitle').text('devoirs');
+            $('.chapitre_list:nth-child(2) .chapitre_subtitle').text('Examens');
+
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(0).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(1).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(2).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(3).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(4).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(5).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(6).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(7).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(8).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(9).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(10).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(11).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(12).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(13).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(14).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(15).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(16).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(17).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(18).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(19).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(20).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(21).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(22).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(1) .chapitre_item').eq(23).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+
+
+
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(0).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(1).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(2).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(3).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(4).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(5).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(6).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(7).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(8).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 09</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(9).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 10</span> <span class='date'>2015/2016</span>")
+
+
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(10).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(11).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(12).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(13).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(14).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(15).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(16).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(17).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(18).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 09</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(19).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 10</span> <span class='date'>2015/2016</span>")
+
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(20).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(21).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(22).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(23).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(24).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(25).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(26).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(27).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(28).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 09</span> <span class='date'>2015/2016</span>")
+            $('.chapitre_list:nth-child(2) .chapitre_item').eq(29).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 10</span> <span class='date'>2015/2016</span>")
+
             // FOOTER
             $(".footer .section_text").html("Nous croyons qu'il faut faire du monde une meilleure expérience. Excellentes idées de cours et plans de cours pour les étudiants ! ");
             $(".footer .footer_item_title").eq(0).text('Préscolaire');
@@ -241,6 +332,12 @@ $(function() {
   $(".en").click(function() {
     $('html').css('font-family', 'Gilroy, sans-serif');
     $(".nav_list ul .nav_link_down").css('font-weight', '500').css('font-size','14px')
+    $('.nav_list ul li a').hover(function(){
+      $(this).css('transform','translateX(10px)');
+    },function(){
+      $(this).css('transform','translateX(0px)');
+    }
+  )
       //header
       $(".nav_list .nav_link").eq(0).html("Preschool <i class='bx bx-chevron-down'></i>");
       $(".nav_list .nav_link").eq(1).html("Primary <i class='bx bx-chevron-down'></i>");
@@ -285,6 +382,12 @@ $(function() {
       $(".expert_card:nth-child(4) .span").text('Active student');
       
       // NiVEAU
+      $('.niveaux_link').hover(function(){
+        $(this).css('transform','translateX(10px)');
+      },function(){
+        $(this).css('transform','translateX(0px)');
+      }
+    )
       $(".niveaux .section_subtitle").text('Our Grade Levels');
       $(".niveaux .section_title").html('find your <span class="span">levels </span>');
       $(".niveaux_container .one .card_title").text('Preschool');
@@ -301,13 +404,13 @@ $(function() {
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(2).html("Third Year Of Primary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(3).html("Fourth year of primary <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .2  .niveaux_list .niveaux_link").eq(4).html("Fifth year of primary <i class='bx bx-right-arrow-alt' ></i>");
-      $('.niveaux_container .3 .niveaux_footer .niveaux_title').html("ST.SUJETS PRIMAIRE <i class='bx bx-right-arrow-alt' ></i>");
+      $('.niveaux_container .2 .niveaux_footer .niveaux_title').html("ST.SUJETS PRIMAIRE <i class='bx bx-right-arrow-alt' ></i>");
 
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(0).html("First Year Average <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(1).html("Second Year Average <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(2).html("Third Year Average <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .3  .niveaux_list .niveaux_link").eq(3).html("Fourth Year Average <i class='bx bx-right-arrow-alt' ></i>");
-      $('.niveaux_container .4 .niveaux_footer .niveaux_title').html("THÉME ET SOLUTIONS S.A.L <i class='bx bx-right-arrow-alt' ></i>");
+      $('.niveaux_container .3 .niveaux_footer .niveaux_title').html("THÉME ET SOLUTIONS S.A.L <i class='bx bx-right-arrow-alt' ></i>");
 
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(0).html("First year of secondary school <i class='bx bx-right-arrow-alt' ></i>");
       $(".niveaux_container .4  .niveaux_list .niveaux_link").eq(1).html("Second year of secondary school <i class='bx bx-right-arrow-alt' ></i>");
@@ -451,6 +554,86 @@ $(function() {
        // PDF
       $('.pdf_title').text("Primary level archival book");
 
+      // CHAPITRE
+      $('.chapitre_content, .chapiter_header').css('text-align', "left");
+      $('.chapitre_item').css('justify-content', "start");
+      $('.chapitre_item').hover(function(){
+        $(this).css('transform','translateX(10px)');
+      },function(){
+        $(this).css('transform','translateX(0px)');
+      }
+      )
+
+      $('.chapitre_title').eq(0).html('semestre 1')
+      $('.chapitre_title').eq(1).html('semestre 2')
+      $('.chapitre_title').eq(2).html('semestre 3')
+
+      $('.chapitre_list:nth-child(1) .chapitre_subtitle').text('homework');
+      $('.chapitre_list:nth-child(2) .chapitre_subtitle').text('Exams');
+
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(0).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(1).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(2).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(3).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(4).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(5).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(6).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(7).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(8).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(9).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(10).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(11).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(12).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(13).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(14).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(15).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(16).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(17).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(18).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(19).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(20).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(21).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(22).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(23).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+
+
+
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(0).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(1).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(2).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(3).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(4).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(5).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(6).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(7).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(8).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 09</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(9).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 10</span> <span class='date'>2015/2016</span>")
+
+
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(10).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(11).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(12).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(13).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(14).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(15).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(16).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(17).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(18).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 09</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(19).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 10</span> <span class='date'>2015/2016</span>")
+
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(20).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 01</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(21).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 02</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(22).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 03</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(23).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 04</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(24).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 05</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(25).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 06</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(26).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 07</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(27).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 08</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(28).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 09</span> <span class='date'>2015/2016</span>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(29).html("<i class='bx bx-right-arrow-alt' ></i> <span class='name'>Example 10</span> <span class='date'>2015/2016</span>")
+
       // FOOTER
       $(".footer .section_text").html('We believe in making the world a better experience. Great lesson ideas and lesson plans for students!');
       $(".footer .footer_item_title").eq(0).text('Preschool');
@@ -493,6 +676,12 @@ $(function() {
   $(".ar").click(function() {
     $('html').css('font-family', 'Cairo, sans-serif');
       //HEADER
+      $('.nav_list ul li a').hover(function(){
+        $(this).css('transform','translateX(-10px)');
+      },function(){
+        $(this).css('transform','translateX(0px)');
+      }
+    )
       $(".nav_list .nav_link").eq(0).html("<i class='bx bx-chevron-down'></i> التمهيدي");
       $(".nav_list .nav_link").eq(1).html("<i class='bx bx-chevron-down'></i> الإبتدائي");
       $(".nav_list .nav_link").eq(2).html("<i class='bx bx-chevron-down'></i> الإعدادي");
@@ -536,6 +725,12 @@ $(function() {
       $(".expert_card:nth-child(4) .span").text('طالب نشط');
 
       //NIVEAUX
+      $('.niveaux_link').hover(function(){
+        $(this).css('transform','translateX(-10px)');
+      },function(){
+        $(this).css('transform','translateX(0px)');
+      }
+    )
       $(".niveaux .section_subtitle").text('مستويات درجاتنا');
       $(".niveaux .section_title").html(' <span class="span">مستواك </span> إبحث عن');
       $(".niveaux_container .one .card_title").text('التمهيدي');
@@ -698,6 +893,87 @@ $(function() {
       $('.box-card .box_title a').eq(1).text("كتاب لامتحانات الفصل الأول الابتدائي الجيل الثاني");
       $('.box-card .box_title a').eq(2).text("كتاب نشاط الرياضيات للعام الأول الابتدائي الجيل الثاني");
       $('.box-card .box_title a').eq(3).text("كتاب نشاط الرياضيات للعام الأول الابتدائي الجيل الثاني");
+
+      // CHAPITRE
+      $('.chapitre_content, .chapiter_header').css('text-align', "right");
+      $('.chapitre_item').css('justify-content', "end");
+      $('.chapitre_card.one').css('order','3');
+       $('.chapitre_card.three').css('order','1');
+      $('.chapitre_item').hover(function(){
+        $(this).css('transform','translateX(-10px)');
+      },function(){
+        $(this).css('transform','translateX(0px)');
+      }
+      )
+
+      $('.chapitre_title').eq(0).html('الفصل الدراسي الأول')
+      $('.chapitre_title').eq(1).html('الفصل الدراسي الثاني')
+      $('.chapitre_title').eq(2).html('الفصل الدراسي الثالث')
+
+      $('.chapitre_list:nth-child(1) .chapitre_subtitle').text('الفروض');
+      $('.chapitre_list:nth-child(2) .chapitre_subtitle').text('الإمتحانات');
+
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(0).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الأول</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(1).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثاني</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(2).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثالث</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(3).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الرابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(4).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الخامس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(5).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السادس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(6).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(7).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثامن</span> <i class='bx bx-left-arrow-alt' ></i>")
+
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(8).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الأول</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(9).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثاني</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(10).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثالث</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(11).html("<span class='date'>2015/2016</span> <span class='name'> النمود الرابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(12).html("<span class='date'>2015/2016</span> <span class='name'>  النمود الخامس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(13).html("<span class='date'>2015/2016</span> <span class='name'> النمود السادس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(14).html("<span class='date'>2015/2016</span> <span class='name'> النمود السابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(15).html("<span class='date'>2015/2016</span> <span class='name'> النمود الثامن</span> <i class='bx bx-left-arrow-alt' ></i>")
+
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(16).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الأول</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(17).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثاني</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(18).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثالث</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(19).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الرابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(20).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الخامس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(21).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السادس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(22).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(1) .chapitre_item').eq(23).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثامن</span> <i class='bx bx-left-arrow-alt' ></i>")
+
+
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(0).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الأول</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(1).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثاني</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(2).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثالث</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(3).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الرابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(4).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الخامس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(5).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السادس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(6).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(7).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثامن</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(8).html("<span class='date'>2015/2016</span> <span class='name'>النمودج التاسع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(9).html("<span class='date'>2015/2016</span> <span class='name'> النمودج العاشر</span> <i class='bx bx-left-arrow-alt' ></i>")
+
+
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(10).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الأول</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(11).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثاني</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(12).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثالث</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(13).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الرابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(14).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الخامس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(15).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السادس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(16).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(17).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثامن</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(18).html("<span class='date'>2015/2016</span> <span class='name'>النمودج التاسع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(19).html("<span class='date'>2015/2016</span> <span class='name'> النمودج العاشر</span> <i class='bx bx-left-arrow-alt' ></i>")
+
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(20).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الأول</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(21).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثاني</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(22).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثالث</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(23).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الرابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(24).html("<span class='date'>2015/2016</span> <span class='name'> النمودج الخامس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(25).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السادس</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(26).html("<span class='date'>2015/2016</span> <span class='name'> النمودج السابع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(27).html("<span class='date'>2015/2016</span> <span class='name'>النمودج الثامن</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(28).html("<span class='date'>2015/2016</span> <span class='name'>النمودج التاسع</span> <i class='bx bx-left-arrow-alt' ></i>")
+      $('.chapitre_list:nth-child(2) .chapitre_item').eq(29).html("<span class='date'>2015/2016</span> <span class='name'> النمودج العاشر</span> <i class='bx bx-left-arrow-alt' ></i>")
 
       // PDF
       $('.pdf_title').text('كتاب أرشيفية من المستوى الابتدائي')
